@@ -1,12 +1,17 @@
 # simple setup mit sftp
 
+## Tools
 - sftp client, z.B. die Integration im PHPStorm oder filezilla/winscp
   - Die Integration bietet Änderungsverfolgung auch ohne git und kann einen Diff beim Deployment erstellen bzw. nur "neue" Änderungen hochladen
 - Datenbank Client, z.B. die Integration im PHPStorm
   - MYSQL Workbench etc.
   - Alternativ die Verwaltungsoberfläche vom Hoster nutzen um DB Dump zu ziehen
   - Im schlimmsten Fall muss phpmyadmin oder adminer genutzt werden
-- Setup mit .ddev https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/
+- Setup mit .ddev 
+  - Installation: https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/
+    - docker desktop installieren (wenn nicht bereits installiert)
+      - colima wird dann nicht benötigt!
+    - ddev installieren z.b. via brew `brew install drud/ddev/ddev`
 
 # Einrichtung von einem neuen Projekt
 
@@ -31,8 +36,8 @@
 
 # Tipps
 
-- Schneller erster Download aller Projektdateien: den Ordner vorher auf dem Server packen mit tar (eigentlich immer verfügbar), z.B. `tar -zcvpf backup-webdirectory.tgz /pfad/zum/projekt/auf/server`, dann dass Archiv runterladen. Manche Verwaltungsoberflächen bieten direkt eine "Backup" auf diese Weise
-- git nutzen! Mit einer sinnvollen .gitignore bei der Assets wie Bilder und die wp-config (!!) oder .env ausgeschlossen werden!
+- Schneller erster Download aller Projektdateien: den Ordner vorher auf dem Server packen mit tar (eigentlich immer verfügbar), z.B. `tar -zcvpf backup-webdirectory.tgz /pfad/zum/projekt/auf/server`, dann dass Archiv downloaden. Manche Verwaltungsoberflächen bieten direkt eine "Backup" auf diese Weise
+- git nutzen! Mit einer sinnvollen .gitignore, bei der Assets wie Bilder und kritische Dateien wie wp-config (!!) oder .env ausgeschlossen werden!
 
 # Hinweise:
 
